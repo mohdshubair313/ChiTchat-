@@ -1,0 +1,102 @@
+body {
+        margin-left: 20px;
+        background-image: url("/assets/background\ chitchat.jpg");
+    } 
+
+.chat-box {
+    height: auto;
+    max-width: 80%;
+    background-color: #f4a261;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 20px;
+    border: 5px solid black;
+    border-radius: 20px;
+    display: inline-block;
+    overflow-wrap: break-word;
+}
+
+#WelcomePage {
+    background-color: #264653;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: wheat;
+    width: inherit;
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: underline;
+    margin-top: 0px;
+}
+
+#from {
+    display: contents;
+    font-size: 30px;
+}
+
+#to {
+    font-size: 30px;
+}
+
+#statementtoConnect {
+    background-color: #e9c46a;
+    height: 50px;
+    font-size: 50px;
+    color: whitesmoke;
+    position: relative;
+    left: -100%;
+    transition: left 1s ease, color 1s ease; 
+    animation: slideFromLeft 1s ease forwards, changeColor 1s ease forwards; 
+    border: 5px solid black;
+    border-radius: 20px;
+}
+
+@keyframes slideFromLeft {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes changeColor {
+    95% {
+        color: black;
+    }
+    100% {
+        color: #de5625; /* New color after transition */
+    }
+}
+
+.msg {
+    background-color: #e76f51;
+    color: white;
+    font-size: 30px;
+    font-family: cursive;
+    border-radius: 20%;
+}
+
+hr {
+    height: 1.6px; 
+    border: solid; 
+    background-color: wheat;
+}
+
+.btnToAdd {
+    height: 30px;
+    border-radius: 20px;
+    background-color: #de5625;
+    color: #fcfcfc;
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease; 
+}
+
+.btnToAdd:hover {
+    background-color: #ff7b47; 
+}

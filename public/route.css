@@ -1,0 +1,24 @@
+body{
+    background-image: url("/assets/Designer\ \(3\).png");
+    background-size: cover;
+    background-position: center;
+    height: 100vh; 
+}
+
+#welcome{
+    height: 500px;
+    display: inline-block;
+    opacity: 0.8;
+    background-color: wheat;
+    font-family:cursive;
+}
+
+#btn{
+    height: 50px;
+    width: 20%;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#btn:hover{
+    background-color: rgb(242, 138, 40);
+}

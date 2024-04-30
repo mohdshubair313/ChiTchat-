@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chiTchat</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <h1 id="WelcomePage">Welcome To chiTchat</h1>
+    <h2 id="statementtoConnect">Connect Your Mind with the world!</h2>
+    <form method="get" action="/chats/new">
+        <button class="btnToAdd">click to add new message</button>
+    </form>
+    <hr>
+    <% for (let chat of chats) { %>
+        <div class="chat-box">
+            <p id="from">From: <%= chat.from %></p>
+            <p id="to">To: <%= chat.to %></p>
+            <div class="msg">
+                <p>Message: <%= chat.msg %></p>
+            </div>
+            <p>Chat Send at: <%= chat.createdAt.toString().split(" ")[4] %> </p>
+            <p>Chat Date is : <%= chat.createdAt.toString().split(" ").slice(0, 4).join("/") %></p>
+        </div>
+        <form action="/chats/<%= chat._id %>/edit" method="get">
+            <button class="btnToAdd">Edit the post</button>
+        </form>
+        <form method = "POST" action="/chats/<%= chat._id %>?_method=Delete">
+        <button class="btnToAdd">Delete the Chat</button>
+        </form>
+        <hr>
+    <% } %>
+</body>
+</html>
